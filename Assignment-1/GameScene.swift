@@ -13,8 +13,19 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
-    
+    let player = SKSpriteNode(imageNamed: "player")
     override func didMove(to view: SKView) {
+        backgroundColor = SKColor.white
+           // adding player position
+           player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+           // add player on scene
+           addChild(player)
         
+        
+      
+        }
     }
-}
+    
+   
+    
+
