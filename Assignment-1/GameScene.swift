@@ -141,7 +141,7 @@ class GameScene: SKScene {
       guard let touch = touches.first else {
         return
       }
-      run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+      run(SKAction.playSoundFileNamed("arrow.mp3", waitForCompletion: false))
       
       let touchLocation = touch.location(in: self)
       
