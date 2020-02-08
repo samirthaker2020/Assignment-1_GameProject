@@ -15,6 +15,8 @@
 		1EF6BC1523EE0F4800EC8854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF6BC1323EE0F4800EC8854 /* LaunchScreen.storyboard */; };
 		1EF6BC2123EE14C700EC8854 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF6BC2023EE14C700EC8854 /* player.png */; };
 		1EF6BC2323EE371300EC8854 /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF6BC2223EE371300EC8854 /* monster.png */; };
+		1EF6BC3123EE513100EC8854 /* knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF6BC3023EE513100EC8854 /* knife.png */; };
+		1EF6BC3423EE530600EC8854 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EF6BC3323EE530600EC8854 /* background.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1EF6BC1623EE0F4800EC8854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EF6BC2023EE14C700EC8854 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		1EF6BC2223EE371300EC8854 /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
+		1EF6BC3023EE513100EC8854 /* knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knife.png; sourceTree = "<group>"; };
+		1EF6BC3323EE530600EC8854 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,27 @@
 		1EF6BC0323EE0F4400EC8854 /* Assignment-1 */ = {
 			isa = PBXGroup;
 			children = (
+				1EF6BC3223EE52ED00EC8854 /* sound */,
 				1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */,
 				1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */,
 				1EF6BC0C23EE0F4400EC8854 /* GameViewController.swift */,
 				1EF6BC0E23EE0F4400EC8854 /* Main.storyboard */,
 				1EF6BC1123EE0F4800EC8854 /* Assets.xcassets */,
+				1EF6BC3023EE513100EC8854 /* knife.png */,
 				1EF6BC2223EE371300EC8854 /* monster.png */,
 				1EF6BC2023EE14C700EC8854 /* player.png */,
 				1EF6BC1323EE0F4800EC8854 /* LaunchScreen.storyboard */,
 				1EF6BC1623EE0F4800EC8854 /* Info.plist */,
 			);
 			path = "Assignment-1";
+			sourceTree = "<group>";
+		};
+		1EF6BC3223EE52ED00EC8854 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				1EF6BC3323EE530600EC8854 /* background.mp3 */,
+			);
+			path = sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +147,8 @@
 			files = (
 				1EF6BC1023EE0F4400EC8854 /* Main.storyboard in Resources */,
 				1EF6BC1223EE0F4800EC8854 /* Assets.xcassets in Resources */,
+				1EF6BC3123EE513100EC8854 /* knife.png in Resources */,
+				1EF6BC3423EE530600EC8854 /* background.mp3 in Resources */,
 				1EF6BC1523EE0F4800EC8854 /* LaunchScreen.storyboard in Resources */,
 				1EF6BC2323EE371300EC8854 /* monster.png in Resources */,
 				1EF6BC2123EE14C700EC8854 /* player.png in Resources */,
@@ -293,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQ98VVU7H4;
 				INFOPLIST_FILE = "Assignment-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQ98VVU7H4;
 				INFOPLIST_FILE = "Assignment-1/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
