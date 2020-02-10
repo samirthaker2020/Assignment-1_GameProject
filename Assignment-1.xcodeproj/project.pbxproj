@@ -16,6 +16,8 @@
 		1E3E15B823F1D09A0011FC73 /* flame7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AF23F1D09A0011FC73 /* flame7.png */; };
 		1E3E15B923F1D09A0011FC73 /* flame5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15B023F1D09A0011FC73 /* flame5.png */; };
 		1E3E15BA23F1D09A0011FC73 /* flame4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15B123F1D09A0011FC73 /* flame4.png */; };
+		1E3E15C223F1ECF40011FC73 /* fire1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15C123F1ECF40011FC73 /* fire1.png */; };
+		1E3E15C423F1EE2F0011FC73 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15C323F1EE2E0011FC73 /* bomb.mp3 */; };
 		1EF6BC0523EE0F4400EC8854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */; };
 		1EF6BC0B23EE0F4400EC8854 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */; };
 		1EF6BC0D23EE0F4400EC8854 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0C23EE0F4400EC8854 /* GameViewController.swift */; };
@@ -39,6 +41,8 @@
 		1E3E15AF23F1D09A0011FC73 /* flame7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame7.png; sourceTree = "<group>"; };
 		1E3E15B023F1D09A0011FC73 /* flame5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame5.png; sourceTree = "<group>"; };
 		1E3E15B123F1D09A0011FC73 /* flame4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame4.png; sourceTree = "<group>"; };
+		1E3E15C123F1ECF40011FC73 /* fire1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire1.png; sourceTree = "<group>"; };
+		1E3E15C323F1EE2E0011FC73 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
 		1EF6BC0123EE0F4400EC8854 /* Assignment-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				1EF6BC0C23EE0F4400EC8854 /* GameViewController.swift */,
 				1EF6BC0E23EE0F4400EC8854 /* Main.storyboard */,
 				1EF6BC1123EE0F4800EC8854 /* Assets.xcassets */,
+				1E3E15C123F1ECF40011FC73 /* fire1.png */,
 				1EF6BC3023EE513100EC8854 /* knife.png */,
 				1EF6BC2223EE371300EC8854 /* monster.png */,
 				1EF6BC2023EE14C700EC8854 /* player.png */,
@@ -119,6 +124,7 @@
 		1EF6BC3223EE52ED00EC8854 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				1E3E15C323F1EE2E0011FC73 /* bomb.mp3 */,
 				1EF6BC3523EE54C900EC8854 /* arrow.mp3 */,
 				1EF6BC3323EE530600EC8854 /* background.mp3 */,
 			);
@@ -183,7 +189,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3E15C223F1ECF40011FC73 /* fire1.png in Resources */,
 				1EF6BC1023EE0F4400EC8854 /* Main.storyboard in Resources */,
+				1E3E15C423F1EE2F0011FC73 /* bomb.mp3 in Resources */,
 				1E3E15B523F1D09A0011FC73 /* flame3.png in Resources */,
 				1EF6BC1223EE0F4800EC8854 /* Assets.xcassets in Resources */,
 				1EF6BC3623EE54C900EC8854 /* arrow.mp3 in Resources */,

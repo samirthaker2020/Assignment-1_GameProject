@@ -52,6 +52,7 @@ class GameScene: SKScene {
     private var bear = SKSpriteNode()
      private var bearWalkingFrames: [SKTexture] = []
     let player = SKSpriteNode(imageNamed: "player")
+     let fire = SKSpriteNode(imageNamed: "fire1")
     var monstersDestroyed = 0
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.white
@@ -181,18 +182,32 @@ class GameScene: SKScene {
        let actionMoveDone = SKAction.removeFromParent()
        projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
      }
-     
+     func ApparitionBonus() {
+         
+         self.addChild(fire)
+      }
+      func removeSprite() {
+         fire.removeFromParent()
+      }
      func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
        print("Hit")
+         fire.position =  monster.position
        projectile.removeFromParent()
        monster.removeFromParent()
-     
+      
+                 // add player on scene
+        let myFunction = SKAction.run({()in self.ApparitionBonus()})
+        let wait = SKAction.wait(forDuration: 0.2)
+        let sound=SKAction.playSoundFileNamed("bomb.mp3", waitForCompletion: false)
+        let remove = SKAction.run({() in self.removeSprite()})
+        self.run(SKAction.sequence([myFunction, sound,wait, remove]))
+         
         
        monstersDestroyed += 1
-       if monstersDestroyed > 30 {
+       if monstersDestroyed > 10 {
          let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-      //   let gameOverScene = GameOverScene(size: self.size, won: true)
-        // view?.presentScene(gameOverScene, transition: reveal)
+        //let gameOverScene = GameOverScene(size: self.size, won: true)
+        //view?.presentScene(gameOverScene, transition: reveal)
        }
      }
      
