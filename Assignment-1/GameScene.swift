@@ -49,6 +49,8 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
         var deltaPoint = CGPoint(x: 0, y: 0)
     private var spinnyNode : SKShapeNode?
+    private var bear = SKSpriteNode()
+     private var bearWalkingFrames: [SKTexture] = []
     let player = SKSpriteNode(imageNamed: "player")
     var monstersDestroyed = 0
     override func didMove(to view: SKView) {
@@ -184,7 +186,8 @@ class GameScene: SKScene {
        print("Hit")
        projectile.removeFromParent()
        monster.removeFromParent()
-       
+     
+        
        monstersDestroyed += 1
        if monstersDestroyed > 30 {
          let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
@@ -192,7 +195,8 @@ class GameScene: SKScene {
         // view?.presentScene(gameOverScene, transition: reveal)
        }
      }
-  
+     
+   
     }
 
     extension GameScene: SKPhysicsContactDelegate {

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E3E15B223F1D09A0011FC73 /* flame9.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15A923F1D09A0011FC73 /* flame9.png */; };
+		1E3E15B323F1D09A0011FC73 /* flame8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AA23F1D09A0011FC73 /* flame8.png */; };
+		1E3E15B423F1D09A0011FC73 /* flame1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AB23F1D09A0011FC73 /* flame1.png */; };
+		1E3E15B523F1D09A0011FC73 /* flame3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AC23F1D09A0011FC73 /* flame3.png */; };
+		1E3E15B623F1D09A0011FC73 /* flame2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AD23F1D09A0011FC73 /* flame2.png */; };
+		1E3E15B723F1D09A0011FC73 /* flame6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AE23F1D09A0011FC73 /* flame6.png */; };
+		1E3E15B823F1D09A0011FC73 /* flame7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15AF23F1D09A0011FC73 /* flame7.png */; };
+		1E3E15B923F1D09A0011FC73 /* flame5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15B023F1D09A0011FC73 /* flame5.png */; };
+		1E3E15BA23F1D09A0011FC73 /* flame4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E15B123F1D09A0011FC73 /* flame4.png */; };
 		1EF6BC0523EE0F4400EC8854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */; };
 		1EF6BC0B23EE0F4400EC8854 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */; };
 		1EF6BC0D23EE0F4400EC8854 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0C23EE0F4400EC8854 /* GameViewController.swift */; };
@@ -21,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E3E15A923F1D09A0011FC73 /* flame9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame9.png; sourceTree = "<group>"; };
+		1E3E15AA23F1D09A0011FC73 /* flame8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame8.png; sourceTree = "<group>"; };
+		1E3E15AB23F1D09A0011FC73 /* flame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame1.png; sourceTree = "<group>"; };
+		1E3E15AC23F1D09A0011FC73 /* flame3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame3.png; sourceTree = "<group>"; };
+		1E3E15AD23F1D09A0011FC73 /* flame2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame2.png; sourceTree = "<group>"; };
+		1E3E15AE23F1D09A0011FC73 /* flame6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame6.png; sourceTree = "<group>"; };
+		1E3E15AF23F1D09A0011FC73 /* flame7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame7.png; sourceTree = "<group>"; };
+		1E3E15B023F1D09A0011FC73 /* flame5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame5.png; sourceTree = "<group>"; };
+		1E3E15B123F1D09A0011FC73 /* flame4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flame4.png; sourceTree = "<group>"; };
 		1EF6BC0123EE0F4400EC8854 /* Assignment-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -47,6 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E3E15A823F1D09A0011FC73 /* source.atlas */ = {
+			isa = PBXGroup;
+			children = (
+				1E3E15A923F1D09A0011FC73 /* flame9.png */,
+				1E3E15AA23F1D09A0011FC73 /* flame8.png */,
+				1E3E15AB23F1D09A0011FC73 /* flame1.png */,
+				1E3E15AC23F1D09A0011FC73 /* flame3.png */,
+				1E3E15AD23F1D09A0011FC73 /* flame2.png */,
+				1E3E15AE23F1D09A0011FC73 /* flame6.png */,
+				1E3E15AF23F1D09A0011FC73 /* flame7.png */,
+				1E3E15B023F1D09A0011FC73 /* flame5.png */,
+				1E3E15B123F1D09A0011FC73 /* flame4.png */,
+			);
+			path = source.atlas;
+			sourceTree = "<group>";
+		};
 		1EF6BBF823EE0F4400EC8854 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +100,7 @@
 		1EF6BC0323EE0F4400EC8854 /* Assignment-1 */ = {
 			isa = PBXGroup;
 			children = (
+				1E3E15A823F1D09A0011FC73 /* source.atlas */,
 				1EF6BC3223EE52ED00EC8854 /* sound */,
 				1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */,
 				1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */,
@@ -149,13 +184,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF6BC1023EE0F4400EC8854 /* Main.storyboard in Resources */,
+				1E3E15B523F1D09A0011FC73 /* flame3.png in Resources */,
 				1EF6BC1223EE0F4800EC8854 /* Assets.xcassets in Resources */,
 				1EF6BC3623EE54C900EC8854 /* arrow.mp3 in Resources */,
+				1E3E15B723F1D09A0011FC73 /* flame6.png in Resources */,
 				1EF6BC3123EE513100EC8854 /* knife.png in Resources */,
+				1E3E15B423F1D09A0011FC73 /* flame1.png in Resources */,
+				1E3E15B923F1D09A0011FC73 /* flame5.png in Resources */,
+				1E3E15B323F1D09A0011FC73 /* flame8.png in Resources */,
+				1E3E15B623F1D09A0011FC73 /* flame2.png in Resources */,
+				1E3E15B823F1D09A0011FC73 /* flame7.png in Resources */,
+				1E3E15B223F1D09A0011FC73 /* flame9.png in Resources */,
 				1EF6BC3423EE530600EC8854 /* background.mp3 in Resources */,
 				1EF6BC1523EE0F4800EC8854 /* LaunchScreen.storyboard in Resources */,
 				1EF6BC2323EE371300EC8854 /* monster.png in Resources */,
 				1EF6BC2123EE14C700EC8854 /* player.png in Resources */,
+				1E3E15BA23F1D09A0011FC73 /* flame4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
