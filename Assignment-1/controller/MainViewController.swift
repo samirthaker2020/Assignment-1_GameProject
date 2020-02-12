@@ -18,6 +18,13 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func exit(_ sender: Any) {
+       
+         showMessageResetApp()
+           
+    }
+    @IBAction func scoreboard(_ sender: UIButton) {
+    }
     @IBAction func startgame(_ sender: UIButton) {
         
        let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -25,7 +32,31 @@ class MainViewController: UIViewController {
               controller.modalPresentationStyle = .fullScreen
              self.present(controller, animated: true, completion: nil)
     }
-    
+    func showMessageResetApp(){
+            let exitAppAlert = UIAlertController(title: "Quit Game",
+                                                 message: "Do you want to Exit ?",
+                                                 preferredStyle: .alert)
+            
+            let resetApp = UIAlertAction(title: "Quit Now", style: .destructive) {
+                (alert) -> Void in
+                    // home button pressed programmatically - to thorw app to background
+                    UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+                    // terminaing app in background
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        self.exit(EXIT_SUCCESS)
+                    })
+            }
+            
+            let laterAction = UIAlertAction(title: "Later", style: .cancel) {
+                (alert) -> Void in
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            exitAppAlert.addAction(resetApp)
+            exitAppAlert.addAction(laterAction)
+            present(exitAppAlert, animated: true, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 
