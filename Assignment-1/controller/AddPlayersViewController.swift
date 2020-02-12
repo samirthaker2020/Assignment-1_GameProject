@@ -12,9 +12,13 @@ class AddPlayersViewController: UIViewController {
 
     @IBOutlet weak var txtaddplayer: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
+              
+            
         // Do any additional setup after loading the view.
         
       
@@ -24,7 +28,14 @@ class AddPlayersViewController: UIViewController {
         
         
         
-         
+        
+       
+         }
+      
+       
+       func userAlreadyExist(kUsernameKey: String) -> Bool {
+        return UserDefaults.standard.object(forKey: kUsernameKey) != nil
+       }
         
     }
     
@@ -38,4 +49,4 @@ class AddPlayersViewController: UIViewController {
     }
     */
 
-}
+

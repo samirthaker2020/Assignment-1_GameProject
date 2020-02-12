@@ -10,13 +10,13 @@ import UIKit
 import SpriteKit
 class MainViewController: UIViewController {
 
-  
+   
     override func viewDidLoad() {
         super.viewDidLoad()
          self.navigationItem.setHidesBackButton(true, animated: false)
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
-        
+         
     }
     
     @IBAction func exit(_ sender: Any) {
