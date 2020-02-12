@@ -24,6 +24,18 @@ class MainViewController: UIViewController {
          showMessageResetApp()
            
     }
+    
+    @IBAction func addplayer(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+         let controller = storyboard.instantiateViewController(withIdentifier: "to_addplayer") as! AddPlayersViewController
+         controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     @IBAction func scoreboard(_ sender: UIButton) {
     }
     @IBAction func startgame(_ sender: UIButton) {

@@ -23,6 +23,15 @@
 		1EAA22B423F3AD050019DAEF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA22B323F3AD050019DAEF /* GameOverViewController.swift */; };
 		1EAA22B823F3B2A40019DAEF /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA22B723F3B2A40019DAEF /* GameOverScene.swift */; };
 		1EAA22BA23F3BF550019DAEF /* Mainmenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA22B923F3BF550019DAEF /* Mainmenu.swift */; };
+		1EAA22BC23F3C49E0019DAEF /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA22BB23F3C49E0019DAEF /* AddPlayersViewController.swift */; };
+		1EAA22C023F3D4090019DAEF /* game.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA22BF23F3D4090019DAEF /* game.png */; };
+		1EAA22C223F3D41B0019DAEF /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA22C123F3D41B0019DAEF /* score.png */; };
+		1EAA22C423F3D4B10019DAEF /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA22C323F3D4B10019DAEF /* MenuTableViewController.swift */; };
+		1EAA22C823F3D6B00019DAEF /* uplayer.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA22C723F3D6B00019DAEF /* uplayer.jpeg */; };
+		1EAA22CA23F3D7CF0019DAEF /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA22C923F3D7CF0019DAEF /* logout.png */; };
+		1EAA22CC23F3D7D90019DAEF /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA22CB23F3D7D90019DAEF /* help.png */; };
+		1EAA22CE23F3D7FA0019DAEF /* order.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EAA22CD23F3D7FA0019DAEF /* order.png */; };
+		1EAA22D223F3ECC00019DAEF /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA22D123F3ECC00019DAEF /* ScoreBoardViewController.swift */; };
 		1EF6BC0523EE0F4400EC8854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */; };
 		1EF6BC0B23EE0F4400EC8854 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */; };
 		1EF6BC0D23EE0F4400EC8854 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6BC0C23EE0F4400EC8854 /* GameViewController.swift */; };
@@ -53,6 +62,15 @@
 		1EAA22B323F3AD050019DAEF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		1EAA22B723F3B2A40019DAEF /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		1EAA22B923F3BF550019DAEF /* Mainmenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mainmenu.swift; sourceTree = "<group>"; };
+		1EAA22BB23F3C49E0019DAEF /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
+		1EAA22BF23F3D4090019DAEF /* game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game.png; sourceTree = "<group>"; };
+		1EAA22C123F3D41B0019DAEF /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
+		1EAA22C323F3D4B10019DAEF /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		1EAA22C723F3D6B00019DAEF /* uplayer.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uplayer.jpeg; sourceTree = "<group>"; };
+		1EAA22C923F3D7CF0019DAEF /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		1EAA22CB23F3D7D90019DAEF /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		1EAA22CD23F3D7FA0019DAEF /* order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order.png; sourceTree = "<group>"; };
+		1EAA22D123F3ECC00019DAEF /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		1EF6BC0123EE0F4400EC8854 /* Assignment-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF6BC0423EE0F4400EC8854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF6BC0A23EE0F4400EC8854 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -102,6 +120,9 @@
 				1EAA22AF23F3926E0019DAEF /* SplashViewController.swift */,
 				1EAA22B123F3927C0019DAEF /* MainViewController.swift */,
 				1EAA22B323F3AD050019DAEF /* GameOverViewController.swift */,
+				1EAA22BB23F3C49E0019DAEF /* AddPlayersViewController.swift */,
+				1EAA22C323F3D4B10019DAEF /* MenuTableViewController.swift */,
+				1EAA22D123F3ECC00019DAEF /* ScoreBoardViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -109,6 +130,12 @@
 		1EAA22AD23F391F90019DAEF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1EAA22C723F3D6B00019DAEF /* uplayer.jpeg */,
+				1EAA22CB23F3D7D90019DAEF /* help.png */,
+				1EAA22CD23F3D7FA0019DAEF /* order.png */,
+				1EAA22C923F3D7CF0019DAEF /* logout.png */,
+				1EAA22C123F3D41B0019DAEF /* score.png */,
+				1EAA22BF23F3D4090019DAEF /* game.png */,
 				1EF6BC3023EE513100EC8854 /* knife.png */,
 				1EF6BC2023EE14C700EC8854 /* player.png */,
 				1EF6BC2223EE371300EC8854 /* monster.png */,
@@ -229,21 +256,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E3E15C223F1ECF40011FC73 /* fire1.png in Resources */,
+				1EAA22CA23F3D7CF0019DAEF /* logout.png in Resources */,
 				1EF6BC1023EE0F4400EC8854 /* Main.storyboard in Resources */,
 				1E3E15C423F1EE2F0011FC73 /* bomb.mp3 in Resources */,
 				1E3E15B523F1D09A0011FC73 /* flame3.png in Resources */,
 				1EF6BC1223EE0F4800EC8854 /* Assets.xcassets in Resources */,
 				1EF6BC3623EE54C900EC8854 /* arrow.mp3 in Resources */,
 				1E3E15B723F1D09A0011FC73 /* flame6.png in Resources */,
+				1EAA22C823F3D6B00019DAEF /* uplayer.jpeg in Resources */,
+				1EAA22CE23F3D7FA0019DAEF /* order.png in Resources */,
 				1EF6BC3123EE513100EC8854 /* knife.png in Resources */,
 				1E3E15B423F1D09A0011FC73 /* flame1.png in Resources */,
 				1E3E15B923F1D09A0011FC73 /* flame5.png in Resources */,
 				1E3E15B323F1D09A0011FC73 /* flame8.png in Resources */,
 				1E3E15B623F1D09A0011FC73 /* flame2.png in Resources */,
+				1EAA22C223F3D41B0019DAEF /* score.png in Resources */,
 				1E3E15B823F1D09A0011FC73 /* flame7.png in Resources */,
 				1E3E15B223F1D09A0011FC73 /* flame9.png in Resources */,
+				1EAA22C023F3D4090019DAEF /* game.png in Resources */,
 				1EF6BC3423EE530600EC8854 /* background.mp3 in Resources */,
 				1EF6BC1523EE0F4800EC8854 /* LaunchScreen.storyboard in Resources */,
+				1EAA22CC23F3D7D90019DAEF /* help.png in Resources */,
 				1EF6BC2323EE371300EC8854 /* monster.png in Resources */,
 				1EF6BC2123EE14C700EC8854 /* player.png in Resources */,
 				1E3E15BA23F1D09A0011FC73 /* flame4.png in Resources */,
@@ -259,9 +292,12 @@
 			files = (
 				1EF6BC0B23EE0F4400EC8854 /* GameScene.swift in Sources */,
 				1EF6BC0D23EE0F4400EC8854 /* GameViewController.swift in Sources */,
+				1EAA22C423F3D4B10019DAEF /* MenuTableViewController.swift in Sources */,
 				1EAA22B823F3B2A40019DAEF /* GameOverScene.swift in Sources */,
 				1EAA22BA23F3BF550019DAEF /* Mainmenu.swift in Sources */,
+				1EAA22D223F3ECC00019DAEF /* ScoreBoardViewController.swift in Sources */,
 				1EAA22B423F3AD050019DAEF /* GameOverViewController.swift in Sources */,
+				1EAA22BC23F3C49E0019DAEF /* AddPlayersViewController.swift in Sources */,
 				1EF6BC0523EE0F4400EC8854 /* AppDelegate.swift in Sources */,
 				1EAA22B023F3926E0019DAEF /* SplashViewController.swift in Sources */,
 				1EAA22B223F3927C0019DAEF /* MainViewController.swift in Sources */,

@@ -14,7 +14,7 @@ class GameOverViewController: UIViewController {
 
      override func viewDidLoad() {
             super.viewDidLoad()
-            
+            self.navigationItem.setHidesBackButton(true, animated: false)
          }
 
 }
