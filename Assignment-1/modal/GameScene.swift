@@ -46,7 +46,8 @@ class GameScene: SKScene {
       static let monster   : UInt32 = 0b1       // 1
       static let projectile: UInt32 = 0b10      // 2
     }
-    private var label : SKLabelNode?
+var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
+    var       playername = SKLabelNode(fontNamed: "Chalkduster")
         var deltaPoint = CGPoint(x: 0, y: 0)
     private var spinnyNode : SKShapeNode?
     private var bear = SKSpriteNode()
@@ -60,6 +61,7 @@ class GameScene: SKScene {
            player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
            // add player on scene
            addChild(player)
+        self.addChild(totalscore)
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
            
@@ -80,7 +82,7 @@ class GameScene: SKScene {
                let currentLocation = touch.location(in: self)
                let previousLocation = touch.previousLocation(in: self)
                
-               deltaPoint = CGPoint(x: currentLocation.x - previousLocation.x, y: currentLocation.y - previousLocation.y)
+               deltaPoint = CGPoint(x: 0, y: currentLocation.y - previousLocation.y)
            }
        }
        
@@ -197,17 +199,23 @@ class GameScene: SKScene {
       
                  // add player on scene
         let myFunction = SKAction.run({()in self.ApparitionBonus()})
-        let wait = SKAction.wait(forDuration: 0.2)
+        let wait = SKAction.wait(forDuration: 0.1)
         let sound=SKAction.playSoundFileNamed("bomb.mp3", waitForCompletion: false)
         let remove = SKAction.run({() in self.removeSprite()})
-        self.run(SKAction.sequence([myFunction, sound,wait, remove]))
+        self.run(SKAction.sequence([sound,myFunction,wait, remove]))
          
-        
        monstersDestroyed += 1
-       if monstersDestroyed > 10 {
+        
+        totalscore.text = "\("Score:")\(monstersDestroyed)"
+        totalscore.fontColor = SKColor.black
+                              totalscore.fontSize = 20
+        
+               totalscore.position = CGPoint(x: self.size.width/4, y: self.size.height/1.12)
+        
+       if monstersDestroyed >= 10 {
          let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-        //let gameOverScene = GameOverScene(size: self.size, won: true)
-        //view?.presentScene(gameOverScene, transition: reveal)
+        let gameOverScene = GameOverScene(size: self.size, won: true)
+        view?.presentScene(gameOverScene, transition: reveal)
        }
      }
      

@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeP-0j-4Qn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697.1014492753625" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1590" y="110"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="JzE-vs-KYb">
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwh-bV-ADc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2637.68115942029" y="109.82142857142857"/>
+            <point key="canvasLocation" x="2375" y="110"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -117,7 +117,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4200" y="101.78571428571428"/>
+            <point key="canvasLocation" x="3181" y="110"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="1Ox-dW-cfL">
+            <objects>
+                <viewController storyboardIdentifier="to_gameover" id="pOV-gH-HGn" customClass="GameOverViewController" customModule="Assignment_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RNB-YZ-yUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5mA-Pq-Ax7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szg-K1-CSr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Fj-Rc-2Bg">
