@@ -206,11 +206,11 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
          
        monstersDestroyed += 1
         
-        totalscore.text = "\("Score:")\(monstersDestroyed)"
+        totalscore.text = "\("Score:   ")\(monstersDestroyed)"
         totalscore.fontColor = SKColor.black
                               totalscore.fontSize = 20
         
-               totalscore.position = CGPoint(x: self.size.width/4, y: self.size.height/1.12)
+        totalscore.position = CGPoint(x: size.width * 0.50, y: size.height * 0.2)
         
        if monstersDestroyed >= 10 {
          let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
