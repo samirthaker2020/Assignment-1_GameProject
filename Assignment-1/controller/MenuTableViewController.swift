@@ -11,6 +11,9 @@ import SpriteKit
 
 class MenuTableViewController: UITableViewController {
 
+    
+    var c  = UserDefaults.standard
+   
     override func viewDidLoad() {
         super.viewDidLoad()
    self.navigationItem.setHidesBackButton(true, animated: false)
@@ -19,6 +22,9 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       c.set(0, forKey: "PlayerA")
+        c.set(0, forKey: "PlayerB")
+       c.set("none", forKey: "currentplayer")
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -30,7 +36,7 @@ class MenuTableViewController: UITableViewController {
                 print("Go to game")
                
                 let sb = UIStoryboard(name: "Main", bundle: nil)
-                let studentDetailsVC = sb.instantiateViewController(withIdentifier: "to_game") as!  GameViewController
+                let studentDetailsVC = sb.instantiateViewController(withIdentifier: "to_startgame") as!   StartGameViewController
                 
             self.navigationController?.pushViewController(studentDetailsVC, animated: true)
             case 1:
