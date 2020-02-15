@@ -22,9 +22,7 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-       c.set(0, forKey: "PlayerA")
-        c.set(0, forKey: "PlayerB")
-       c.set("none", forKey: "currentplayer")
+      
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

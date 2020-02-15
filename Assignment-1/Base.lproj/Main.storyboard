@@ -177,6 +177,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="Startgame:" destination="IQs-No-MDO" eventType="touchUpInside" id="HWE-5m-PaX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="::::Select Player::::" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUO-um-d08">
                                 <rect key="frame" x="97" y="129" width="220" height="34"/>
@@ -311,7 +314,7 @@
         <!--View Controller-->
         <scene sceneID="SVW-pe-izW">
             <objects>
-                <viewController id="4bd-MD-xYf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="maingame" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4bd-MD-xYf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qkz-Bp-Di4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

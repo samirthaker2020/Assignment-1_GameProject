@@ -40,6 +40,8 @@ extension CGPoint {
   }
 }
 class GameScene: SKScene {
+    var c=UserDefaults.standard;
+     
     struct PhysicsCategory {
       static let none      : UInt32 = 0
       static let all       : UInt32 = UInt32.max
@@ -132,13 +134,24 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
          addChild(monster)
           
          // Determine speed of the monster
-         let actualDuration = random(min: CGFloat(2.0), max: CGFloat(8.0))
+        if c.string(forKey: "level")=="Easy"{
+             let  actualDuration = random(min: CGFloat(4.0), max: CGFloat(8.0))
+            // Create the actions
+                    let actionMove = SKAction.move(to: CGPoint(x: actualx, y: -monster.size.height * 8.0 ),
+                            duration: TimeInterval(actualDuration))
+                    let actionMoveDone = SKAction.removeFromParent()
+                    monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+        }else{
+           let    actualDuration = random(min: CGFloat(1.0), max: CGFloat(4.0))
+      // Create the actions
+              let actionMove = SKAction.move(to: CGPoint(x: actualx, y: -monster.size.height * 8.0 ),
+                      duration: TimeInterval(actualDuration))
+              let actionMoveDone = SKAction.removeFromParent()
+              monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+        }
+       
           
-         // Create the actions
-         let actionMove = SKAction.move(to: CGPoint(x: actualx, y: -monster.size.height * 8.0 ),
-                 duration: TimeInterval(actualDuration))
-         let actionMoveDone = SKAction.removeFromParent()
-         monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+        
     }
     
      override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -212,7 +225,24 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         
         totalscore.position = CGPoint(x: size.width * 0.50, y: size.height * 0.2)
         
-       if monstersDestroyed >= 10 {
+       if monstersDestroyed >= 5{
+        let name=c.string(forKey: "currentplayer")
+        print(name)
+        print(monstersDestroyed)
+        if name == "Player-A"
+        {  c.set(monstersDestroyed, forKey: "PlayerA")
+            print(c.string(forKey: "PlayerB"))
+        }
+        else if name == "Player-B"{
+              c.set(monstersDestroyed, forKey: "PlayerB")
+            print(c.string(forKey: "PlayerB"))
+        }
+        else{
+             c.set(0, forKey: "PlayerB")
+             c.set(0, forKey: "PlayerA")
+        }
+       print(monstersDestroyed)
+        
          let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
         let gameOverScene = GameOverScene(size: self.size, won: true)
         view?.presentScene(gameOverScene, transition: reveal)

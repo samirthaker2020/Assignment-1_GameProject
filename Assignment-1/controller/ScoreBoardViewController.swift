@@ -24,8 +24,8 @@ class ScoreBoardViewController: UIViewController  {
         let b = c.string(forKey: "PlayerB")!
         // Do any additional setup after loading the view.
        
-        playerB.text="A::"+b
-        playerA.text="B::"+a
+        playerB.text="B::"+b
+        playerA.text="A::"+a
     }
     
    
