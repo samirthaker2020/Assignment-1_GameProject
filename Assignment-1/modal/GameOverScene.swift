@@ -27,16 +27,17 @@
  /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  /// THE SOFTWARE.
  
- 
+ import UIKit
  import Foundation
  import SpriteKit
 
  class GameOverScene: SKScene {
-   init(size: CGSize, won:Bool) {
+    var viewController: UIViewController?
+    init(size: CGSize, won:Bool,p:Int) {
      super.init(size: size)
 
      backgroundColor = SKColor.white
-     
+       
      // 2
      let message = won ? "You Won!" : "You Lose :["
      
@@ -47,25 +48,26 @@
      label.fontColor = SKColor.black
      label.position = CGPoint(x: size.width/2, y: size.height/2)
      addChild(label)
+        let label1 = SKLabelNode(fontNamed: "Chalkduster")
+            label1.text="Your Score ::"+" "+String(p)
+            label1.fontSize = 20
+            label1.fontColor = SKColor.black
+            label1.position = CGPoint(x: size.width/2, y: size.height/3)
+            addChild(label1)
      
      // 4
-     run(SKAction.sequence([
-       SKAction.wait(forDuration: 3.0),
-       SKAction.run() { [weak self] in
-         // 5
-         guard let `self` = self else { return }
-         //let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-         //let scene = GameScene(size: size)
-      //   self.view?.presentScene(scene, transition:reveal)
-         }
-       ]))
-
-    }
-   
-   // 6
-   required init(coder aDecoder: NSCoder) {
-     fatalError("init(coder:) has not been implemented")
-   }
+        
+        let seconds = 4.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            // Put your code which should be executed with a delay here
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        let homeVC = storyboard.instantiateViewController(withIdentifier: "to_mainpage") as! MenuTableViewController
+                        //Below's navigationController is useful if u want NavigationController in the destination View
+                        let navigationController = UINavigationController(rootViewController: homeVC)
+                        appDelegate.window!.rootViewController = navigationController
+        }
+       
      
  /*    func changeScene(){
          let secondScene = GameScene(size: self.size)
@@ -78,4 +80,9 @@
    
  
   }*/
+ }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+ }
  }
