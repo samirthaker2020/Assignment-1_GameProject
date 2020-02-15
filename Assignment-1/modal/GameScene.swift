@@ -242,6 +242,7 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
              c.set(0, forKey: "PlayerA")
         }
        print(monstersDestroyed)
+        print(c.string(forKey: "level"))
         
          let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
         let gameOverScene = GameOverScene(size: self.size, won: true)

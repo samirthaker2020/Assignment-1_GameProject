@@ -20,12 +20,23 @@ class ScoreBoardViewController: UIViewController  {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let a = c.string(forKey: "PlayerA")!
-        let b = c.string(forKey: "PlayerB")!
+        let a = c.string(forKey: "PlayerA")
+        let b = c.string(forKey: "PlayerB")
         // Do any additional setup after loading the view.
+       if a==nil
+       {
+        playerA.text="0"
+       }else{
+         playerA.text="A::"+a!
+        }
+        if b==nil
+             {
+              playerB.text="0"
+             }else{
+                 playerB.text="B::"+b!
+              }
+     
        
-        playerB.text="B::"+b
-        playerA.text="A::"+a
     }
     
    

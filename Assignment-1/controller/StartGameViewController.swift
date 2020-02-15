@@ -22,7 +22,7 @@ class StartGameViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
         pickerData=["Player-A","Player-B"]
         level = ["Easy","Hard"]
         
-              c.set("none", forKey: "currentplayer")
+             
                c.set("Easy", forKey: "level")
         
         
@@ -76,11 +76,17 @@ class StartGameViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     
        // Number of columns of data
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        c.set(pickerData[playerselection.selectedRow(inComponent: 0)], forKey: "currentplayer")
+        if component == 0{
+        c.set(pickerData[row], forKey: "currentplayer")
         print( c.string(forKey: "currentplayer")!)
+        }
+        else{
+             c.set(level[component], forKey: "level")
+                          print( c.string(forKey: "level")!)
+        }
         
-        c.set(pickerData[playerselection.selectedRow(inComponent: 1)], forKey: "level")
-               print( c.string(forKey: "level")!)
+        
+      
     //   print( level[playerselection.selectedRow(inComponent: 1)])
     }
     /*
