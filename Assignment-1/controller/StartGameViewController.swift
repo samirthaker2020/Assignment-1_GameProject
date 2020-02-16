@@ -77,11 +77,13 @@ class StartGameViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
        // Number of columns of data
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0{
+            c.removeObject(forKey: "currentplayer")
         c.set(pickerData[row], forKey: "currentplayer")
         print( c.string(forKey: "currentplayer")!)
         }
         else{
-             c.set(level[component], forKey: "level")
+            c.removeObject(forKey: "level")
+             c.set(level[row], forKey: "level")
                           print( c.string(forKey: "level")!)
         }
         
