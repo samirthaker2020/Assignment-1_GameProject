@@ -206,6 +206,13 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
       }
      func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
        print("Hit")
+        
+        if player.position == monster.position
+        {
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+                 let gameOverScene = GameOverScene(size: self.size, won: true,p:monstersDestroyed)
+                 view?.presentScene(gameOverScene, transition: reveal)
+        }
          fire.position =  monster.position
        projectile.removeFromParent()
        monster.removeFromParent()

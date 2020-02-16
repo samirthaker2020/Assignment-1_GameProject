@@ -37,10 +37,15 @@
      super.init(size: size)
 
      backgroundColor = SKColor.white
-       
+        var c = UserDefaults.standard
      // 2
      let message = won ? "You Won!" : "You Lose :["
-     
+     let label0 = SKLabelNode(fontNamed: "Chalkduster")
+        label0.text=c.string(forKey: "currentplayer")! + "\n level:"+c.string(forKey: "level")!
+                label0.fontSize = 20
+                label0.fontColor = SKColor.black
+                label0.position = CGPoint(x: size.width/2, y: size.height/4)
+                addChild(label0)
      // 3
      let label = SKLabelNode(fontNamed: "Chalkduster")
      label.text = message
@@ -57,7 +62,7 @@
      
      // 4
         
-        let seconds = 4.0
+        let seconds = 5.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             // Put your code which should be executed with a delay here
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

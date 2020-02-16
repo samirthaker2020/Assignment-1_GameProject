@@ -58,6 +58,10 @@ class MenuTableViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 print("Go to Help Page")
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+        let studentDetailsVC = sb.instantiateViewController(withIdentifier: "help") as!  HelpViewController
+                                              
+                                          self.navigationController?.pushViewController(studentDetailsVC, animated: true)
             case 1:
                 print("Go to logout")
                 showMessageResetApp()

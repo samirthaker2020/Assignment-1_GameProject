@@ -27,13 +27,13 @@ class ScoreBoardViewController: UIViewController  {
        {
         playerA.text="0"
        }else{
-         playerA.text="A::"+a!
+         playerA.text="Player-A::"+a!
         }
         if b==nil
              {
               playerB.text="0"
              }else{
-                 playerB.text="B::"+b!
+                 playerB.text="Player-B::"+b!
               }
      
        
