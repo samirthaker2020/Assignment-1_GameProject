@@ -24,6 +24,9 @@ func /(point: CGPoint, scalar: CGFloat) -> CGPoint {
   return CGPoint(x: point.x / scalar, y: point.y / scalar)
 }
 
+
+
+// determine the architecture of your device (or simulator).
 #if !(arch(x86_64) || arch(arm64))
 func sqrt(a: CGFloat) -> CGFloat {
   return CGFloat(sqrtf(Float(a)))
@@ -39,9 +42,16 @@ extension CGPoint {
     return self / length()
   }
 }
+
+// GameScene Class
+
 class GameScene: SKScene {
+    
+    
     var c=UserDefaults.standard;
-     
+     var misshit=0
+    var beforehit=0
+    var afterhit=0
     struct PhysicsCategory {
       static let none      : UInt32 = 0
       static let all       : UInt32 = UInt32.max
@@ -50,19 +60,25 @@ class GameScene: SKScene {
     }
 var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
     var       playername = SKLabelNode(fontNamed: "Chalkduster")
+     var       lblmisshit = SKLabelNode(fontNamed: "Chalkduster")
+    
         var deltaPoint = CGPoint(x: 0, y: 0)
     private var spinnyNode : SKShapeNode?
     private var bear = SKSpriteNode()
      private var bearWalkingFrames: [SKTexture] = []
+    
+    // Adding Sprite Node
     let player = SKSpriteNode(imageNamed: "player")
      let fire = SKSpriteNode(imageNamed: "fire1")
     var monstersDestroyed = 0
     override func didMove(to view: SKView) {
+        // set the background color
         backgroundColor = SKColor.white
            // adding player position
            player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
            // add player on scene
            addChild(player)
+        addChild(lblmisshit)
         self.addChild(totalscore)
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
@@ -73,12 +89,20 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
                SKAction.wait(forDuration: 1.0)
                ])
            ))
-           
+           // add background audio sound
            let backgroundMusic = SKAudioNode(fileNamed: "background.mp3")
            backgroundMusic.autoplayLooped = true
            addChild(backgroundMusic)
         
+        totalscore.fontColor = SKColor.black
+                              totalscore.fontSize = 20
+        
+        totalscore.position = CGPoint(x: size.width * 0.50, y: size.height * 0.2)
+      
+        
 }
+    
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
            if let touch = touches.first {
                let currentLocation = touch.location(in: self)
@@ -115,9 +139,11 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
     }
     
     func addMonster() {
+       
+      
       // Create sprite
       let monster = SKSpriteNode(imageNamed: "monster")
-      
+        lblmisshit.text="Life Left::" + String(misshit)
       monster.physicsBody = SKPhysicsBody(rectangleOf: monster.size) // 1
       monster.physicsBody?.isDynamic = true // 2
       monster.physicsBody?.categoryBitMask = PhysicsCategory.monster // 3
@@ -140,21 +166,27 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
                     let actionMove = SKAction.move(to: CGPoint(x: actualx, y: -monster.size.height * 8.0 ),
                             duration: TimeInterval(actualDuration))
                     let actionMoveDone = SKAction.removeFromParent()
+              
                     monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+          
         }else{
            let    actualDuration = random(min: CGFloat(1.0), max: CGFloat(4.0))
       // Create the actions
               let actionMove = SKAction.move(to: CGPoint(x: actualx, y: -monster.size.height * 8.0 ),
                       duration: TimeInterval(actualDuration))
               let actionMoveDone = SKAction.removeFromParent()
+           
               monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+            
         }
        
-          
+         
         
     }
     
      override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+         beforehit=beforehit+1
+        
        // 1 - Choose one of the touches to work with
        guard let touch = touches.first else {
          return
@@ -206,7 +238,8 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
       }
      func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
        print("Hit")
-        
+      afterhit=afterhit+1
+        lblmisshit.text="Life Left::" + String(misshit)
         if player.position == monster.position
         {
             let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
@@ -224,13 +257,16 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         let remove = SKAction.run({() in self.removeSprite()})
         self.run(SKAction.sequence([sound,myFunction,wait, remove]))
          
-       monstersDestroyed += 1
+        monstersDestroyed += 1
         
         totalscore.text = "\("Score:   ")\(monstersDestroyed)"
+        
         totalscore.fontColor = SKColor.black
                               totalscore.fontSize = 20
         
         totalscore.position = CGPoint(x: size.width * 0.50, y: size.height * 0.2)
+        
+       
         
        if monstersDestroyed >= 5{
         let name=c.string(forKey: "currentplayer")
@@ -255,6 +291,30 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         let gameOverScene = GameOverScene(size: self.size, won: true,p:monstersDestroyed)
         view?.presentScene(gameOverScene, transition: reveal)
        }
+        
+        if beforehit != afterhit && beforehit >= 5 
+        {
+            let name=c.string(forKey: "currentplayer")
+                   print(name)
+                   print(monstersDestroyed)
+                   if name == "Player-A"
+                   {  c.set(monstersDestroyed, forKey: "PlayerA")
+                       print(c.string(forKey: "PlayerB"))
+                   }
+                   else if name == "Player-B"{
+                         c.set(monstersDestroyed, forKey: "PlayerB")
+                       print(c.string(forKey: "PlayerB"))
+                   }
+                   else{
+                        c.set(0, forKey: "PlayerB")
+                        c.set(0, forKey: "PlayerA")
+                   }
+                  print(monstersDestroyed)
+                   print(c.string(forKey: "level"))
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+                   let gameOverScene = GameOverScene(size: self.size, won: false,p:monstersDestroyed)
+                   view?.presentScene(gameOverScene, transition: reveal)
+        }
      }
      
    
