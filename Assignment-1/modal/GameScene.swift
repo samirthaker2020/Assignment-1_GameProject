@@ -93,7 +93,7 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
            let backgroundMusic = SKAudioNode(fileNamed: "background.mp3")
            backgroundMusic.autoplayLooped = true
            addChild(backgroundMusic)
-        
+        // add label score to the screen
         totalscore.fontColor = SKColor.black
                               totalscore.fontSize = 20
         
@@ -102,7 +102,7 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         
 }
     
-    
+    // for moving player vertically
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
            if let touch = touches.first {
                let currentLocation = touch.location(in: self)
@@ -184,6 +184,8 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         
     }
     
+    // firing the knife towards the monster
+    
      override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
          beforehit=beforehit+1
         
@@ -239,7 +241,7 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
      func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
        print("Hit")
       afterhit=afterhit+1
-        lblmisshit.text="Life Left::" + String(misshit)
+       // lblmisshit.text="Life Left::" + String(misshit)
         if player.position == monster.position
         {
             let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
@@ -250,15 +252,18 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
        projectile.removeFromParent()
        monster.removeFromParent()
       
-                 // add player on scene
+                 // add blast image on scene
+        
         let myFunction = SKAction.run({()in self.ApparitionBonus()})
         let wait = SKAction.wait(forDuration: 0.1)
         let sound=SKAction.playSoundFileNamed("bomb.mp3", waitForCompletion: false)
         let remove = SKAction.run({() in self.removeSprite()})
         self.run(SKAction.sequence([sound,myFunction,wait, remove]))
          
+        // calculate total moster destroyed
         monstersDestroyed += 1
         
+        // calculate total score
         totalscore.text = "\("Score:   ")\(monstersDestroyed)"
         
         totalscore.fontColor = SKColor.black
@@ -267,7 +272,7 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         totalscore.position = CGPoint(x: size.width * 0.50, y: size.height * 0.2)
         
        
-        
+        // finish the game
        if monstersDestroyed >= 5{
         let name=c.string(forKey: "currentplayer")
         print(name)
@@ -292,7 +297,9 @@ var       totalscore = SKLabelNode(fontNamed: "Chalkduster")
         view?.presentScene(gameOverScene, transition: reveal)
        }
         
-        if beforehit != afterhit && beforehit >= 5 
+        // player has to utilize all knife if any one knife is wasted game over
+        
+        if beforehit != afterhit && beforehit >= 5
         {
             let name=c.string(forKey: "currentplayer")
                    print(name)
